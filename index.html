@@ -17,23 +17,72 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>A Story of Hope</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=3872074497" id="pagesheet"/>
-    <!--HTML Widget code-->
-  <style type="text/css">#u205.size_fluid_width_height iframe { position:absolute; left:0; top:0; }</style>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=3948692084" id="pagesheet"/>
+    <!--custom head HTML-->
+  <style>
+
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 500;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+
+</style>
+  <!--HTML Widget code-->
+  <style type="text/css">#u724.size_fluid_width_height iframe { position:absolute; left:0; top:0; }</style>
  </head>
  <body>
 
   <div class="clearfix borderbox" id="page"><!-- group -->
-   <div class="size_fluid_width_height grpelem" id="u205" data-pintopage="page_fluidx" data-sizePolicy="fluidWidthHeight"><!-- custom html -->
-    <div class="fluid_height_spacer"></div>
-     
-<iframe class="actAsDiv" style="width:100%;height:100%;" src="//www.youtube.com/embed/Kh0-dcM2vjA?autoplay=1&loop=1&playlist=Kh0-dcM2vjA&showinfo=0&theme=dark&color=red&controls=0&modestbranding=1&start=0&fs=0&iv_load_policy=3&wmode=transparent&rel=0" frameborder="0" allowfullscreen></iframe>
+   <div class="clearfix grpelem" id="pu327"><!-- group -->
+    <div class="browser_width grpelem" id="u327-bw">
+     <div id="u327"><!-- simple frame --></div>
+    </div>
+    <div class="browser_width grpelem" id="u724-bw">
+     <div class="size_browser_width" id="u724"><!-- custom html -->
+       
+<iframe class="actAsDiv" style="width:100%;height:100%;" src="//www.youtube.com/embed/kzoRF9efc1Q?autoplay=1&loop=1&playlist=kzoRF9efc1Q&showinfo=0&theme=dark&color=white&controls=0&modestbranding=0&start=0&fs=0&iv_load_policy=3&wmode=transparent&rel=0" frameborder="0" allowfullscreen></iframe>
 
+     </div>
+    </div>
    </div>
-   <div class="grpelem" id="u216"><!-- simple frame -->
-    <div class="fluid_height_spacer"></div>
+   <div id="u750-wrapper">
+    <div class="clip_frame" id="u750"><!-- image -->
+     <img class="block" id="u750_img" src="images/dusty-grunge_withborder-crop-u750.png?crc=486954190" alt="" data-heightwidthratio="0.5625" data-image-width="1920" data-image-height="1080"/>
+    </div>
    </div>
-   <div class="verticalspacer" data-offset-top="1260" data-content-above-spacer="1260" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   <div class="verticalspacer" data-offset-top="1548" data-content-above-spacer="1548" data-content-below-spacer="62" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
   </div>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -50,6 +99,8 @@ var muse_init=function(){require.config({baseUrl:""});require(["jquery","museuti
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
 Muse.Utils.showWidgetsWhenReady();/* body */
