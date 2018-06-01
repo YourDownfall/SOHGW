@@ -10,61 +10,38 @@
 
 	
 <body>
+	
+	<section class="overlay" >
+	
+	<img src="images/Dusty-Grunge_withborder.png" width="100%" height="100%" alt="" opacity="0.91" >
+		
+	</section>
  	
 <section class="Headimage" >
 		<img  src="images/Title.png" alt=""
 	 
-	 width="20%"
+	 width="25%"
     height="auto" class="Headimage" 
 	 rotate="20"
 			 opacity="0"
 	 
 	 
-	 />
-</section> 
-
-	<section class="full-size-page">
-  <div id="video-overlay" style="background-image:url(images/overlay.jpg);"></div>
-<div class="background-video">
-   <div class="foreground-video">
-       <div id="player"></div>
-   </div>
-</div>
-</section>
-<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+	 /></section> 
+	<section class="background-video">
 	
-<div class="overlay">	<img src="images/Dusty-Grunge_withborder.png" width="100%" height="100%" alt=""/></div>
-<script type="text/javascript">
-   var player;
-   function onYouTubeIframeAPIReady() {
-       player = new YT.Player('player', {
-           videoId: 'kzoRF9efc1Q',
-           playerVars: {
-               mute: 1,
-               autoplay: 1,
-               loop: 1,
-               controls: 0,
-               showinfo: 0,
-               autohide: 0,
-               enablejsapi: 1,
-               modestbranding: 1,
-               playlist: 'kzoRF9efc1Q',
-               vq: 'hd1080'
-           },
-           allowfullscreen: 1,
-           events: {
-               'onStateChange': onPlayerStateChange
-           }
-       });
-   }
-   function onPlayerStateChange(el) {
-       if(el.data === 1) {
-           jQuery('#video-overlay').hide();
-       }
-	   if(el.data === 0) {
-           jQuery('#video-overlay').show();
-       }
-   }
-</script>
+		<video  playsinline autoplay muted loop>
+
+
+<source src="video/Website Background.mp4" type="video/mp4">
+	
+	
+
+
+
+</video></section>
+
+
+	
+
 </body>
 </html>

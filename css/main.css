@@ -14,7 +14,7 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 30;
 	opacity: 1;
  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -57,7 +57,7 @@ body {
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 2;
+        z-index: 10;
 	 opacity: 0.91;
 
 }
@@ -68,12 +68,11 @@ body {
 
 /* Background video */
   .background-video {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
+   position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
       overflow: hidden;
   }
 .foreground-video,
