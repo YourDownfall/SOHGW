@@ -3,11 +3,90 @@
 
 
 body {
-	 overflow:hidden;
+	
+	 overflow:auto;
     margin: 0;
     padding: 0;
+	background : #000000;
+	height: 4000px;
 }
 
+
+ .block{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+} 
+	
+
+.sec2{
+	position: absolute;
+	height: 766px;
+	zindex: 700;
+	top: 938px;
+	
+}
+.img-parallax{
+	
+	
+	width: 100vmax;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,100%);
+  pointer-events: none ;
+	z-index: -10;
+	
+}
+
+.parallax-window {
+    min-height: 100%;
+	min-width: 100%;
+    background: transparent;
+	z-index: 90;
+}
+
+.page2{
+	color: #077CE1;
+	height: 91px;
+	width: 100%;
+	border: 2px solid #73AD21;
+	z-index: 499;
+}
+
+.Gal{
+	
+	position: fixed;
+	z-index: 1;
+	opacity: 1;
+		
+	
+}
+
+.arrowbutton{
+	
+	position: absolute;
+	align-self: center;
+        top: 86%;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 80;
+	 opacity: 1;
+	max-height: 15%;
+	max-width: 15%;
+		opacity: 1;
+ -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+
+	
+}
 .Headimage {
 	position: absolute;
 	top: 0px;
@@ -16,11 +95,11 @@ body {
 	left: 0;
 	z-index: 30;
 	opacity: 1;
- -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;	
+ -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;	
 	
 }
 @keyframes fadein {
@@ -52,7 +131,7 @@ body {
 
 .overlay {
 	    
-  		position: absolute;
+  		position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
@@ -68,12 +147,16 @@ body {
 
 /* Background video */
   .background-video {
-   position: fixed;
+   position: absolute;
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
       overflow: hidden;
+	  transform: translateZ(0);
+	  -webkit-box-shadow: 10px 5px 20px black;
+-moz-box-shadow: 10px 5px 20px black;
+box-shadow: 10px 5px 20px black;
   }
 .foreground-video,
 .background-video iframe {
@@ -104,3 +187,5 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
+
+

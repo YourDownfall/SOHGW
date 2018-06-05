@@ -4,32 +4,40 @@
 <meta charset="utf-8">
 <title>A Story of Hope</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="webfonts/ShadowsIntoLight/stylesheet.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
 	
 </head>
 
 	
 <body>
 	
-	<section class="overlay" >
 	
-	<img src="images/Dusty-Grunge_withborder.png" width="100%" height="100%" alt="" opacity="0.91" >
+	
+	<section >
 		
-	</section>
- 	
-<section class="Headimage" >
-		<img  src="images/Title.png" alt=""
-	 
-	 width="25%"
-    height="auto" class="Headimage" 
-	 rotate="20"
-			 opacity="0"
-	 
-	 
-	 /></section> 
-	<section class="background-video">
+		<div style="font-family: ShadowsIntoLight; color: white; font-size: 3em; padding-top: 10%; padding-left: 2em; z-index: -50;"  class="Gal" >
+<h3>Gallery</h3>
+			
+			
+  </div>
+		<input href="#section2" rel="" type="image" class="arrowbutton"  src="images/ScrollDownButton.png" alt="Scroll Down"  >
 	
-		<video  playsinline autoplay muted loop>
+	<img src="images/Dusty-Grunge_withborder.png" width="100%" height="100%" alt="" opacity="0.91" class="parallax__layer overlay" >
+		
+
+  <img  src="images/Title.png" alt=""
+	 
+	width="25%"
+    height="auto" class="Headimage" 
+	rotate="20"
+	opacity="0"
+	 
+	 
+	 />
+
+		<video  playsinline  autoplay  muted loop  class="background-video">
 
 
 <source src="video/Website Background.mp4" type="video/mp4">
@@ -40,8 +48,39 @@
 
 </video></section>
 
+	
+	
+	
+	
+<section class="sec2" >
+	<div style="font-family: ShadowsIntoLight; color: white; font-size: 3em; padding-top: 10%; padding-left: 2em;" id="section2" name="section2"  >
+
+  </div>
+</section>
+<div class="parallax-window" data-parallax="scroll" data-image-src="images/ParallaxImage.png"></div>
 
 	
+<script>
+$('input').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+	
+		
+	$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 800) {
+        $('.Gal').fadeIn();
+    } else {
+        $('.Gal').fadeOut();
+    }
+
+});
+	
+</script>	
+
 
 </body>
 </html>
