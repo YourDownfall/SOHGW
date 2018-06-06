@@ -8,8 +8,10 @@ body {
     margin: 0;
     padding: 0;
 	background : #000000;
-	height: 4000px;
+	height: 2000px;
+
 }
+
 
 
  .block{
@@ -19,7 +21,11 @@ body {
   overflow: hidden;
   font-size: 16px;
 } 
+
+.Titlepos{
 	
+	z-index: 15;
+}
 
 .sec2{
 	position: absolute;
@@ -58,48 +64,45 @@ body {
 }
 
 .Gal{
-	
-	position: fixed;
-	z-index: 1;
-	opacity: 1;
-		
+    position: absolute;
+    z-index: 15;
+    opacity: 1;
+    top: 110%;
+    left: 30%;
+    pointer-events: none;
 	
 }
 
 .arrowbutton{
-	
-	position: absolute;
-	align-self: center;
-        top: 86%;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        z-index: 80;
-	 opacity: 1;
-	max-height: 15%;
-	max-width: 15%;
-		opacity: 1;
- -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
-
+    position: absolute;
+    align: center;
+    top: 85%;
+    right: auto;
+    bottom: 0;
+    z-index: 80;
+    opacity: 1;
+    max-height: auto;
+    max-width:  100px;
+    opacity: 1;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
+    margin-left: 50%;
+    margin-right: auto;
+    display: block;
 	
 }
 .Headimage {
-	position: absolute;
-	top: 0px;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 30;
-	opacity: 1;
- -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;	
+    position: center;
+    z-index: 12;
+    opacity: 1;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
 	
 }
 @keyframes fadein {
@@ -130,15 +133,26 @@ body {
 
 
 .overlay {
-	    
-  		position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 10;
-	 opacity: 0.91;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.91;
+    pointer-events: none;
 
+}
+
+.gallerie{
+	
+	position: fixed;
+	
+}
+
+.gallery{
+	
+	z-index: 850;
 }
 
 .full-size-page {
@@ -147,24 +161,22 @@ body {
 
 /* Background video */
   .background-video {
-   position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-      overflow: hidden;
-	  transform: translateZ(0);
-	  -webkit-box-shadow: 10px 5px 20px black;
--moz-box-shadow: 10px 5px 20px black;
-box-shadow: 10px 5px 20px black;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: -2;
+	-webkit-box-shadow: 10px 5px 20px black;
+	-moz-box-shadow: 10px 5px 20px black;
+	box-shadow: 10px 5px 20px black;
   }
 .foreground-video,
 .background-video iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     pointer-events: none;
 }
 
@@ -188,4 +200,79 @@ box-shadow: 10px 5px 20px black;
     background-position: 50% 50%;
 }
 
+.row{
+	
+	position: fixed;
+}
 
+.Gallerie{
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+	
+}
+
+
+.gallery {
+  //  width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 9;
+    top: 120%;
+    left: 15vw;
+    opacity: 0.8;
+    max-width: 1200px;
+}
+.img-c {
+  width: 300px;
+  height: 300px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    transition: transform ease-in-out 300ms;
+    ;
+}
+
+.img-w img {
+    padding: 2px;
+    display: none;
+}
+
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+//  transform: translateX(-50%);
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
