@@ -200,6 +200,7 @@ max-width: 100vw;
 	-webkit-box-shadow: 10px 5px 20px black;
 	-moz-box-shadow: 10px 5px 20px black;
 	box-shadow: 10px 5px 20px black;
+	  background-color: black!important;
   }
 .foreground-video,
 .background-video iframe {
@@ -209,6 +210,7 @@ max-width: 100vw;
     min-width: 100%;
     min-height: 100%;
     pointer-events: none;
+	background-color: black !important;
 }
 
 @media (min-aspect-ratio: 16/9) {
