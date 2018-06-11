@@ -37,4 +37,7 @@
 	line-height: 1;
 	text-align: right;
 	color: rgba(189,205,215,1.00);
+	backface-visibility: visible;
+	background-color: black;
+	background-size: cover;
 }
