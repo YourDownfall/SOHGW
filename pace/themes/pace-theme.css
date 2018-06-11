@@ -5,6 +5,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+	background: rgba(0,0,0,1.00);
 }
 
 .pace.pace-inactive .pace-progress {
