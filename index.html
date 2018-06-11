@@ -11,12 +11,24 @@
 <script type="text/javascript" src="js/jQuery.js"></script>
 <script type="text/javascript" src="js/parallax.js"></script>
 
+
+
+  <script src="/pace/pace.js"></script>
+  <link href="/pace/themes/pace-theme.css" rel="stylesheet" />
+
+	
+	
 </head>
 
 	
 <body>
-	
+	<script>pace.start()</script>	
 
+<div id="loading">
+  <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
+</div>	
+	
+	
 	
 	
 	
@@ -99,7 +111,7 @@
 	
 	<img class="diary" src="images/Diary_website.png"  alt=""/>
 	</div>
-<footer class="foot" id="foot">Content for  class "foot" id "foot" Goes Here</footer>
+<footer class="foot" id="foot"><a href="Legal Notice.html " title="Legal Notice" style="color: rgba(158,158,158,1.00);" >Legal Notice and Privacy Policy</a></footer>
 <script>
 $('input').click(function(){
     $('html, body').animate({
@@ -153,7 +165,6 @@ $(document).on("click", ".img-c.active", function() {
 })
 	
 </script>	
-
 
 </body>
 </html>
