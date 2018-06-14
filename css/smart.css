@@ -350,4 +350,54 @@ width: 100%;
 
 	
 
-}
+	
+	.text{
+			padding-top: 7em;
+		font-size: 3em;
+		font-family: 'ShadowsIntoLight';
+		text-align: center;
+		color: grey !important;
+	
+	  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;	
+		
+	}	
+	
+.twitter{
+		
+		padding-top: 0;
+		font-size: 4em;
+		font-family: 'ShadowsIntoLight';
+		text-align: center;
+		color: grey !important;
+	cursor: pointer;
+	  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		
+	}
+
+.twitter:hover{
+		
+		padding-top: 0;
+		font-size: 4em;
+		font-family: 'ShadowsIntoLight';
+		text-align: center;
+		color: white !important;
+cursor: pointer;
+	  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+			
+	}
+	
