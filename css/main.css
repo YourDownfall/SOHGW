@@ -52,7 +52,7 @@ body {
     min-height: 75%;
     min-width: 100%;
     background: transparent;
-    z-index: 90;
+    z-index: -90;
 	
 }
 
